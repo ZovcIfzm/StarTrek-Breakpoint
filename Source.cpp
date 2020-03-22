@@ -1,6 +1,6 @@
 
-#include "Part_I.h"
-#include "Part_II.h"
+#include "part-i.h"
+#include "part-ii.h"
 
 int main() {
 	partI();

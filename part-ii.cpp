@@ -1,10 +1,10 @@
-
 //////////////////
 #include <iostream>
 #include <string>
-#include <windows.h>
 #include <cstdlib>
 #include <ctime>
+#include <Windows.h>
+#include "storyfunctions.h"
 
 //Needed Begining Stuff
 using namespace std;
@@ -326,14 +326,8 @@ int partII()
 
 //Star Trek Intro Begining
 
-	Beep(392,250);  // G
-	Beep(523,125);  // C
-	Beep(698,500);  // F
-	Beep(659,250);  // E
-	Beep(523,250);  // C
-	Beep(440,250);  // A
-	Beep(587,250);  // D
-	Beep(784,500);  // G
+	mainTritone();
+	remainingTheme();
 
 //Star Trek Intro Ending
 
@@ -347,9 +341,7 @@ int partII()
 //Swag Industries Intro Begining
 
 	
-	Beep(392,250);  // G
-	Beep(523,125);  // C
-	Beep(698,500);  // F
+	mainTritone();
 
 
 //End of SWAG INDUSTRIES Intro
@@ -357,19 +349,13 @@ int partII()
 	cout << endl;
 	Sleep(1000);
 	cout << "Written by Alex Ruan" << endl;
-	Beep(392,250);  // G
-	Beep(523,125);  // C
-	Beep(698,500);  // F
+	mainTritone();
 	cout << endl;
 	cout << "Created by Alex Ruan" << endl;
-	Beep(392,250);  // G
-	Beep(523,125);  // C
-	Beep(698,500);  // F
+	mainTritone();
 	cout << endl;
 	cout << "Awesomeness provided by Alex Ruan" << endl;
-	Beep(392,250);  // G
-	Beep(523,125);  // C
-	Beep(698,500);  // F
+	mainTritone();
 	cout << endl; 
 
 //Instructions
@@ -377,30 +363,18 @@ int partII()
 //Start Section Alpha
 	
 	cout << "Instructions" << endl;
-	Beep(392,250);  // G
-	Beep(523,125);  // C
-	Beep(698,500);  // F
+	mainTritone();
 	cout << endl;
 	cout << "Yes or no questions will be answered by either a capital Yes or No." << endl;
-	Beep(392,250);  // G
-	Beep(523,125);  // C
-	Beep(698,500);  // F
+	mainTritone();
 	cout << "If given a choice between A B or C type the given letter in capital." << endl;
-	Beep(392,250);  // G
-	Beep(523,125);  // C
-	Beep(698,500);  // F
+	mainTritone();
 	cout << "If given a choice between different classes. Type the class fully." << endl;
-	Beep(392,250);  // G
-	Beep(523,125);  // C
-	Beep(698,500);  // F
+	mainTritone();
 	cout << "Example: Start? What you type: Yes." << endl;
-	Beep(392,250);  // G
-	Beep(523,125);  // C
-	Beep(698,500);  // F
+	mainTritone();
 	cout << "Example: Do you A.Say Swag B.Say Awesome or C. say Yolo. What you type: A." << endl;
-	Beep(392,250);  // G
-	Beep(523,125);  // C
-	Beep(698,500);  // F
+	mainTritone();
 	cout << "Example: Nova, Avenger, or Breakpoint. What you type: Nova." << endl;
 //Start
 //Errors - None
@@ -412,14 +386,8 @@ int partII()
 
 		cout << "Star Trek Adventure" << endl;
 		cout << "Part II - Where No One Has Gone Before" << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
-		Beep(659,250);  // E
-		Beep(523,250);  // C
-		Beep(440,250);  // A
-		Beep(587,250);  // D
-		Beep(784,500);  // G
+		mainTritone();
+		remainingTheme();
 		cout << endl;
 		cout << endl;
 
@@ -427,36 +395,26 @@ int partII()
 
 		Sleep(2000);
 		cout << "5 Days After The Battle of Starbase 78" << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		Sleep(1000);
 		cout << endl;
 		cout << "Admiral Preston: Kevin, I promote you to Captain. And offer you your first command." << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		Sleep(1000);
 		cout << endl;
 		cout << "Admiral Preston: Do you wish to take command of the Avenger, a Defiant class ship." << endl;
 		cout << "Speciallizing in Evasive Manuvers and Combat." << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		Sleep(1500);
 		cout << endl;
 		cout << "Admiral Preston: Do you wish to take command of the Solstace, a Nova class ship." << endl;
 		cout << "Speciallizing in Evasive Manuvers, Warp Speed, and Science." << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		Sleep(1500);
 		cout << endl;
 		cout << "Admiral Preston: Or do you wish to take command of the Breakpoint, a Ambassador class ship." << endl;
 		cout << "Well rounded on Warp Speed, Combat, and Science, however has low manuverability." << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		Sleep(1500);
 		
 	}
@@ -465,18 +423,14 @@ int partII()
 		do
 		{
 			cout << "Avenger, Solstace, or Breakpoint?" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			Sleep(1000);
 			cout << endl;
 			cout << endl;
 			cin >> shipName;
 			if(shipName == "Avenger")
 			{
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				shipType = "Destroyer";
 				shipClass = "Defiant";
 				shields = defiantShields;
@@ -489,9 +443,7 @@ int partII()
 			}
 			else if(shipName == "Solstace")
 			{
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				shipType = "Scout";
 				shipClass = "Nova";
 				shields = novaShields;
@@ -504,9 +456,7 @@ int partII()
 			}
 			else if(shipName == "Breakpoint")
 			{
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				shipType = "Cruiser";
 				shipClass = "Ambassador";
 				shields = ambassadorShields;
@@ -519,9 +469,7 @@ int partII()
 			}
 			else if(shipName == "EnterpriseE")
 			{
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				shipType = "Battleship";
 				shipClass = "Solvereign";
 				shields = solvereignShields;
@@ -535,20 +483,14 @@ int partII()
 		}while (!dl6);
 		Sleep(1000);
 		cout << "You have chosen the " << shipName << " a " << shipClass << " class starship." << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		Sleep(1000);
 		cout << "Lets test it in a simulator." << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		Sleep(2000);
 
 		cout << "Klingon Destroyer K'riath, a K'vort class ship is approaching at high warp." << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		a = false;
 		
 		do
@@ -557,9 +499,7 @@ int partII()
 				cin >> input;
 				if (input == 'A')
 				{
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					
 
 					srand(static_cast<unsigned int>(time(0)));
@@ -618,9 +558,7 @@ int partII()
 					if(SenemyShields < 1)
 					{
 						cout << "Enemy Shields are Down!" << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						SenemyShields = 0;
 					}
 					if (shields < 1)
@@ -648,9 +586,7 @@ int partII()
 				}
 				else if (input == 'B')
 				{
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					
 
 					srand(static_cast<unsigned int>(time(0)));
@@ -709,9 +645,7 @@ int partII()
 					if(SenemyShields < 1)
 					{
 						cout << "Enemy Shields are Down!" << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						SenemyShields = 0;
 					}
 					if (shields < 1)
@@ -752,9 +686,7 @@ int partII()
 					
 					if(shipName == "Avenger")
 					{
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						shipType = "Destroyer";
 						shipClass = "Defiant";
 						shields = defiantShields;
@@ -767,9 +699,7 @@ int partII()
 					}
 					else if(shipName == "Solstace")
 					{
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						shipType = "Scout";
 						shipClass = "Nova";
 						shields = novaShields;
@@ -782,9 +712,7 @@ int partII()
 					}
 					else if(shipName == "Breakpoint")
 					{
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						shipType = "Cruiser";
 						shipClass = "Ambassador";
 						shields = ambassadorShields;
@@ -797,9 +725,7 @@ int partII()
 					}
 					else if(shipName == "EnterpriseE")
 					{
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						shipType = "Battleship";
 						shipClass = "Solvereign";
 						shields = solvereignShields;
@@ -813,37 +739,25 @@ int partII()
 			}
 			cout << "Nice match. However there is a situation and we have" << endl;
 			cout << "mobilized a small task force at Tou Signa V" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			Sleep(1000);
 			cout << "Will you join the attack force?" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			cout << "A. Yes   B. No" << endl;
 			cin >> input;
-			if (input = 'A')
+			if (input == 'A')
 			{
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				a = false;
 				cout << "We will give you a makeshift crew for this mission." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				Sleep(1000);
 				cout << "Arriving at Tou Signa V" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				Sleep(1000);
 				cout << "Sir, We are detecting 4 other Federation ships combating" << endl;
 				cout << "The Klingon Starbase." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				AfleetNumber = 4;
 				do
 				{
@@ -853,9 +767,7 @@ int partII()
 					{
 						cout << endl;
 						cout << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						
 
 						srand(static_cast<unsigned int>(time(0)));
@@ -954,9 +866,7 @@ int partII()
 						if(kratShields < 1)
 						{
 							cout << "Enemy Shields are Down!" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							cout << endl;
 							kratShields = 0;
 						}
@@ -984,9 +894,7 @@ int partII()
 					{
 						cout << endl;
 						cout << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						
 
 						srand(static_cast<unsigned int>(time(0)));
@@ -1082,9 +990,7 @@ int partII()
 						if(kratShields < 1)
 						{
 							cout << "Enemy Shields are Down!" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							cout << endl;
 							kratShields = 0;
 						}
@@ -1119,23 +1025,15 @@ int partII()
 				}while(!a);
 				cout << "Enemy Starbase Destroyed!" << endl;
 				cout << "Mission Accomplished" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Beep(659,250);  // E
-				Beep(523,250);  // C
-				Beep(440,250);  // A
-				Beep(587,250);  // D
-				Beep(784,500);  // G
+				mainTritone();
+				remainingTheme();
 				if (true)
 				{
 					{
 						
 						if(shipName == "Avenger")
 						{
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							shipType = "Destroyer";
 							shipClass = "Defiant";
 							shields = defiantShields;
@@ -1148,9 +1046,7 @@ int partII()
 						}
 						else if(shipName == "Solstace")
 						{
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							shipType = "Scout";
 							shipClass = "Nova";
 							shields = novaShields;
@@ -1163,9 +1059,7 @@ int partII()
 						}
 						else if(shipName == "Breakpoint")
 						{
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							shipType = "Cruiser";
 							shipClass = "Ambassador";
 							shields = ambassadorShields;
@@ -1178,9 +1072,7 @@ int partII()
 						}
 						else if(shipName == "EnterpriseE")
 						{
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							shipType = "Battleship";
 							shipClass = "Solvereign";
 							shields = solvereignShields;
@@ -1198,7 +1090,7 @@ int partII()
 		{
 			cout << "Your desision." << endl;
 		}
-		else if (input = 'B')
+		else if (input == 'B')
 		{
 			cout << "Your desision." << endl;
 		}
@@ -1210,40 +1102,22 @@ int partII()
 		cout << endl;
 		cout << "Fur Elise" << endl;
 		cout << "Intro of Star Trek" << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
-		Beep(659,250);  // E
-		Beep(523,250);  // C
-		Beep(440,250);  // A
-		Beep(587,250);  // D
-		Beep(784,500);  // G
+		mainTritone();
+		remainingTheme();
 		cout << endl;
 		cout << endl;
 		cout << "-----Story Writers-----" << endl;
 		cout << endl;
 		cout << "Alex Ruan" << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
-		Beep(659,250);  // E
-		Beep(523,250);  // C
-		Beep(440,250);  // A
-		Beep(587,250);  // D
-		Beep(784,500);  // G
+		mainTritone();
+		remainingTheme();
 		cout << endl;
 		cout << endl;
 		cout << "-----Programmers-----" << endl;
 		cout << endl;
 		cout << "Alex Ruan" << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
-		Beep(659,250);  // E
-		Beep(523,250);  // C
-		Beep(440,250);  // A
-		Beep(587,250);  // D
-		Beep(784,500);  // G
+		mainTritone();
+		remainingTheme();
 		cout << endl;
 		cout << endl;
 		cout << "-----Part Creation Time-----" << endl;
@@ -1251,14 +1125,8 @@ int partII()
 		cout << "15 Hours to make this part" << endl;
 		cout << endl;
 		cout << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
-		Beep(659,250);  // E
-		Beep(523,250);  // C
-		Beep(440,250);  // A
-		Beep(587,250);  // D
-		Beep(784,500);  // G
+		mainTritone();
+		remainingTheme();
 		cout << endl;
 		Sleep(2000);
 		return 0;

@@ -1,11 +1,11 @@
-
 //////////////////
 #include <iostream>
 #include <string>
-#include <windows.h>
 #include <cstdlib>
 #include <ctime>
 #include <fstream>
+#include <Windows.h>
+#include "storyfunctions.h"
 
 
 //Needed Begining Stuff
@@ -460,14 +460,8 @@ int partI()
 
 	//Star Trek Intro Begining
 
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
-		Beep(659,250);  // E
-		Beep(523,250);  // C
-		Beep(440,250);  // A
-		Beep(587,250);  // D
-		Beep(784,500);  // G
+		mainTritone();
+		remainingTheme();
 
 	//Star Trek Intro Ending
 
@@ -481,29 +475,21 @@ int partI()
 	//Swag Industries Intro Begining
 
 		
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 
 
 	//End of SWAG INDUSTRIES Intro
 
 		cout << endl;
-		Sleep(1000);
+		textPause();
 		cout << "Written by Alex Ruan" << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		cout << endl;
 		cout << "Created by Alex Ruan" << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		cout << endl;
 		cout << "Awesomeness provided by Alex Ruan" << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		cout << endl; 
 
 	//Instructions
@@ -511,30 +497,18 @@ int partI()
 	//Start Section Alpha
 		
 		cout << "Instructions" << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		cout << endl;
 		cout << "Yes or no questions will be answered by either a capital Yes or No." << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		cout << "If given a choice between A B or C type the given letter in capital." << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		cout << "If given a choice between different classes. Type the class fully." << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		cout << "Example: Start? What you type: Yes." << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		cout << "Example: Do you A.Say Swag B.Say Awesome or C. say Yolo. What you type: A." << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
+		mainTritone();
 		cout << "Example: Nova, Avenger, or Breakpoint. What you type: Nova." << endl;
 	//Start
 	//Errors - None
@@ -550,29 +524,21 @@ int partI()
 
 		if (partA == true)
 		{
-			Beep(523,125);  // C
+			confirmationBeep();
 			cout << "Part I - Tutorial" << endl;
-			Sleep(2000);
+			textPauseLong();
 			cout << "You are Ensign Kevin Novatia" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(3000);
+			mainTritone();
+			textPause();
 			cout << "You are on Starbase 78 in the Lancardo Sector" << endl; 
 			cout << "awaiting your first deep space assignment." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			Sleep(5000);
 			cout << "The Stardate is 44253.8" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			Sleep(5000);
 			cout << "Lets Begin" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			Sleep (2000);
 
 	//Screen Jump
@@ -584,7 +550,7 @@ int partI()
 			cout << endl;
 			cout << endl;
 			cout << endl;
-			Sleep(2000);
+			textPauseLong();
 
 	//Story Begining
 	//Alpha Section Alpha
@@ -593,73 +559,53 @@ int partI()
 			{
 			cout << "You awake on your bed and get up. You room is small and cubicle." << endl; 
 			cout << "There is a door, a cabinet, your bed, and a calandar." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(2000);
+			mainTritone();
+			textPauseLong();
 			cout << "Do you A. Go back to sleep. B. Go out the door. C. Look in the cabinet." << endl;
 			cout << "Or D. Look at your calendar." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			cin >> input;
 			if (input == 'A')
 			{
-				Beep(523,125);  // C
+				confirmationBeep();
 				cout << "You go back to sleep." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << endl;
-				Sleep(2000);
+				textPauseLong();
 				cout << "You awake on your bed and get up. You room is small and cubicle. There is a door, a cabinet, your bed, and a calandar." << endl;
 				cout << "Do you, B. Go out the door. C. Look in the cabinet. Or D. Look at your calendar." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << endl;
-				Sleep(1000);
+				textPause();
 				cin >> input;
 				if (input == 'B')
 				{
-					Beep(523,125);  // C
+					confirmationBeep();
 					cout << "You go out the door and you realize, you have no idea" << endl;
 					cout << "what you are supposed to do. You go back inside your room." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cout << endl;
-					Sleep(1000);
+					textPause();
 					cout << "Do you, C. Look in the cabinet. Or D. Look at your calendar." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cin >> input;
 					if (input == 'C')
 					{
-						Beep(523,125);  // C
+						confirmationBeep();
 						cout << "You look in the cabinet there is nothing there." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						cout << "Do you, D. Look at your calendar." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						cin >> input;
 						if (input == 'D')
 						{
-							Beep(523,125);  // C
+							confirmationBeep();
 							cout << "Well FINALLY. You just had to choose every other option didn't you." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(2000);
+							mainTritone();
+							textPauseLong();
 							cout << "On the calender you see you have to go to the ship dock to wait for your ship." << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							Sleep(3000);
 							storyProgress = 1;
 	//Alpha Section Beta
@@ -671,43 +617,33 @@ int partI()
 			}
 			else if (input == 'B')
 			{
-				Beep(523,125);  // C
+				confirmationBeep();
 				cout << "You go out the door and you realize, you have no idea what" << endl;
 				cout << "you are supposed to do. You go back inside your room." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << "Do you, A. Go back to sleep, C. Look in the cabinet." << endl;
 				cout << "Or D. Look at your calendar." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cin >> input;
 
 				if (input == 'A')
 				{
-					Beep(523,125);  // C
+					confirmationBeep();
 					cout << "You wake up." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cout << endl;
-					Sleep(2000);
+					textPauseLong();
 					cout << "Do you C. Look in the cabinet. Or D. Look at your calendar." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cin >> input;
 
 					if (input == 'D')
 					{
-						Beep(523,125);  // C
-						Sleep(2000);
+						confirmationBeep();
+						textPauseLong();
 						cout << "On the calender you see you have to go to the ship dock to" << endl;
 						cout << "wait for your ship." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						Sleep(3000);
 						cout << endl;
 						storyProgress = 1;
@@ -715,27 +651,21 @@ int partI()
 				}
 				else if (input == 'C')
 				{
-					Beep(523,125);  // C
+					confirmationBeep();
 					cout << "You look in the cabinet there is nothing there." << endl;
 					cout << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cout << "Do you, D. Look at your calendar." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cin >> input;
 					if (input == 'D')
 					{
-						Beep(523,125);  // C
-						Sleep(2000);
+						confirmationBeep();
+						textPauseLong();
 						cout << "On the calender you see you have to go to the ship dock" << endl;
 						cout << "to wait for your ship." << endl;
 						cout << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						Sleep(3000);
 						storyProgress = 1;
 					}
@@ -745,27 +675,21 @@ int partI()
 
 				if (input == 'C')
 				{
-					Beep(523,125);  // C
+					confirmationBeep();
 					cout << "You look in the cabinet there is nothing there." << endl;
 					cout << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cout << "Do you, D. Look at your calendar." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cin >> input;
 					if (input == 'D')
 					{
-						Beep(523,125);  // C
-						Sleep(2000);
+						confirmationBeep();
+						textPauseLong();
 						cout << "On the calender you see you have to go to the ship dock to wait" << endl;
 						cout << "for your ship." << endl;
 						cout << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						Sleep(3000);
 						storyProgress = 1;
 
@@ -773,14 +697,12 @@ int partI()
 
 				if (input == 'D')
 				{
-					Beep(523,125);  // C
-					Sleep(2000);
+					confirmationBeep();
+					textPauseLong();
 					cout << "On the calender you see you have to go to the ship dock to wait for" << endl;
 					cout << "your ship." << endl;
 					cout << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					Sleep(3000);
 					storyProgress = 1;
 				}
@@ -791,27 +713,21 @@ int partI()
 			}
 			else if (input == 'C')
 			{
-				Beep(523,125);  // C
+				confirmationBeep();
 				cout << "You look in the cabinet there is nothing there." << endl;
 				cout << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << "Do you, A. Go back to sleep, B. Go out the door. Or D. Look at your calendar." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cin >> input;
 				if (input == 'D')
 				{
-					Beep(523,125);  // C
-					Sleep(2000);
+					confirmationBeep();
+					textPauseLong();
 					cout << "On the calender you see you have to go to the ship dock to wait for" << endl;
 					cout << "your ship." << endl;
 					cout << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					Sleep(3000);
 					storyProgress = 1;
 				}
@@ -820,27 +736,21 @@ int partI()
 
 				if (input == 'B')
 				{
-					Beep(523,125);  // C
+					confirmationBeep();
 					cout << "You go out the door and you realize, you have no idea what you are" << endl;
 					cout << "supposed to do. You go back inside your room." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cout << "Do you, A. Go to sleep. Or D. Look at your calendar." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cin >> input;
 					if (input == 'D')
 					{
-						Beep(523,125);  // C
-						Sleep(2000);
+						confirmationBeep();
+						textPauseLong();
 						cout << "On the calender you see you have to go to the ship dock to wait" << endl;
 						cout << "for your ship." << endl;
 						cout << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						Sleep(3000);
 						storyProgress = 1;
 					}
@@ -849,27 +759,21 @@ int partI()
 
 					if (input == 'A')
 					{
-						Beep(523,125);  // C
+						confirmationBeep();
 						cout << "You go back sleep." << endl;
 						cout << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						cout << "Do you D go look at your calendar?" << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						cin >> input;
 						if (input == 'D')
 						{
-							Beep(523,125);  // C
-							Sleep(2000);
+							confirmationBeep();
+							textPauseLong();
 							cout << "On the calender you see you have to go to the ship dock to wait for" << endl;
 							cout << "your ship." << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							Sleep(3000);
 							storyProgress = 1;
 						}
@@ -877,55 +781,43 @@ int partI()
 				}
 				if (input == 'A')
 				{
-					Beep(523,125);  // C
+					confirmationBeep();
 					cout << "You awake on your bed and get up." << endl;
 					cout << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
-					Sleep(2000);
+					mainTritone();
+					textPauseLong();
 					cout << "Do you B. Go outside. Or D. Look at your calendar." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cin >> input;
 					if (input == 'B')
 					{
-						Beep(523,125);  // C
+						confirmationBeep();
 						cout << "You go outside and realize you have no idea where to go. You go back" << endl;
 						cout << "in your room." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						cout << "Do you, D. Look at your calendar." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						cin >> input;
 						if (input == 'D')
 						{
-							Beep(523,125);  // C
-							Sleep(2000);
+							confirmationBeep();
+							textPauseLong();
 							cout << "On the calender you see you have to go to the ship dock to wait for" << endl;
 							cout << "your ship." << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							Sleep(3000);
 							storyProgress = 1;
 						}
 					}
 					if (input == 'D')
 					{
-						Beep(523,125);  // C
-						Sleep(2000);
+						confirmationBeep();
+						textPauseLong();
 						cout << "On the calender you see you have to go to the ship dock to wait for" << endl;
 						cout << "your ship." << endl;
 						cout << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						Sleep(3000);
 						storyProgress = 1;
 					}
@@ -937,31 +829,23 @@ int partI()
 				{
 					if (input == 'A')
 					{
-						Beep(523,125);  // C
+						confirmationBeep();
 						cout << "You awake on your bed and get up." << endl;
 						cout << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
-						Sleep(2000);
+						mainTritone();
+						textPauseLong();
 						cout << "Do you D. Look at your calendar." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						cin >> input;
 						if (input == 'D')
 						{
-							Beep(523,125);  // C
-							Sleep(2000);
+							confirmationBeep();
+							textPauseLong();
 							cout << "On the calender you see you have to go to the ship dock to wait for" << endl;
 							cout << "your ship." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							Sleep(3000);
 							storyProgress = 1;
 						}
@@ -971,17 +855,13 @@ int partI()
 			}
 			else if (input == 'D')
 			{
-				Beep(523,125);  // C
-				Sleep(2000);
+				confirmationBeep();
+				textPauseLong();
 				cout << "On the calender you see you have to go to the ship dock to wait for" << endl;
 				cout << "your ship." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				Sleep(3000);
 				storyProgress = 1;
 
@@ -991,72 +871,52 @@ int partI()
 			}
 			if (storyProgress == 1)
 			{
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Beep(659,250);  // E
-				Beep(523,250);  // C
-				Beep(440,250);  // A
-				Beep(587,250);  // D
-				Beep(784,500);  // G
+				mainTritone();
+				remainingTheme();
 				cout << "You get up and go to the ship dock. As you are walking along the corrider," << endl;
 				cout << "someone comes up to you" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << endl;
 				cout << "Stranger: Hello, how are you today?" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(2000);
+				mainTritone();
+				textPauseLong();
 				cout << endl;
 				cout << "Do you A. Say Hello I am fine, how are you? B. Say Get out of my way idiot" << endl;
 				cout << "and punch him. or C. Shoot him with a phaser." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << endl;
 				cin >> choice;
 				if (choice == 'B' || choice == 'C')
 				{
-					Beep(523,125);  // C
+					confirmationBeep();
 					cout << "Stranger: OW! Security! Security!" << endl;
-					Beep(440,500);  // A
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
-					Sleep(2000);
+					firePhaser();
+					mainTritone();
+					textPauseLong();
 					cout << endl;
 					karma = -1;
 					cout << "Do you A. Say I'm sorry. It was a reflex. Or B. Set Phasers to kill" << endl;
 					cout << "and shoot him." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cout << endl;
 					cin >> choice;
 					if (choice == 'B')
 					{
-						Beep(523,125);  // C
+						confirmationBeep();
 						cout << "You shot him. What are you doing! Your not supposed to be shooting" << endl;
 						cout << "your friends!" << endl;
-						Beep(440,500);  // A
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						firePhaser();
+						mainTritone();
 						cout << endl;
 						karma = -2;
 						storyProgress = 2;
 					}
 					else if (choice == 'A')
 					{
-						Beep(523,125);  // C
+						confirmationBeep();
 						cout << "Stranger: ... ok..." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						cout << endl;
 						storyProgress = 2;
 					}
@@ -1064,11 +924,9 @@ int partI()
 				}
 				else
 				{
-					Beep(523,125);  // C
+					confirmationBeep();
 					cout << "Stranger: I'm fine, nice meeting you!." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cout << endl;
 					karma = 1;
 					storyProgress = 2;
@@ -1078,56 +936,38 @@ int partI()
 	//Beta Section Beta
 
 			cout << "-*You arive at the ShipDock*-" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			cout << endl;
-			Sleep(2000);
+			textPauseLong();
 
 	//Beta Section Beta Alpha
 
 			if (karma == -2)
 			{
-				Beep(523,125);  // C
+				confirmationBeep();
 				cout << "Unknown Captain: Hello I am Captain Julia, I'm Sorry, however our" << endl;
 				cout << "ship designator was shot down in the corridors by someone." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(2000);
+				mainTritone();
+				textPauseLong();
 				cout << "Captain Julia: We have run a security check through the corriders and" << endl;
 				cout << "found that Kevin Novatia shot him." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << "Security: Ensign, if you would come with us." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << "Do you A. Come willingly B. Shoot them. or C. Run away." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cin >> input;
 				if (input == 'B')
 				{
-					Beep(523,125);  // C
+					confirmationBeep();
 					cout << "Before you could raise your phaser, you were shot and killed." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
-					Sleep(2000);
+					mainTritone();
+					textPauseLong();
 					cout << "GAME OVER" << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
-					Beep(659,250);  // E
-					Beep(523,250);  // C
-					Beep(440,250);  // A
-					Beep(587,250);  // D
-					Beep(784,500);  // G
-					Sleep(2000);
+					mainTritone();
+					remainingTheme();
+					textPauseLong();
 					return 0;
 				}
 
@@ -1135,24 +975,16 @@ int partI()
 
 				else if (input == 'C')
 				{
-					Beep(523,125);  // C
-					Beep(440,500);  // A
+					confirmationBeep();
+					firePhaser();
 					cout << "Two seconds after you started running," << endl;
 					cout << "you were shot and killed." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
-					Sleep(2000);
+					mainTritone();
+					textPauseLong();
 					cout << "Game Over" << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
-					Beep(659,250);  // E
-					Beep(523,250);  // C
-					Beep(440,250);  // A
-					Beep(587,250);  // D
-					Beep(784,500);  // G
-					Sleep(2000);
+					mainTritone();
+					remainingTheme();
+					textPauseLong();
 					return 0;
 				}
 
@@ -1160,46 +992,32 @@ int partI()
 
 				else if (input == 'A')
 				{
-					Beep(523,125);  // C
+					confirmationBeep();
 					cout << "-*You were taken to the court on starbase.*-" << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cout << endl;
-					Sleep(2000);
+					textPauseLong();
 					cout << "Judge: You are convicted of murdering another person. We have evidance" << endl;
 					cout << "showing your homicide. Do you have anything to say?" << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cout << endl;
-					Sleep(1000);
+					textPause();
 					cout << "Do you A. Say No. B. Try to run. or C. Take the security guards phaser." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cin >> input;
 					if (input == 'A')
 					{
-						Beep(523,125);  // C
+						confirmationBeep();
 						cout << endl;
 						cout << "You were sentanced to the penal colony on Theta 5 for 20 years." << endl;
 						cout << "Atleast you got to serve StarFleet." << endl;
 						cout << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
-						Sleep(1000);
+						mainTritone();
+						textPause();
 						cout << "Game Over" << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
-						Beep(659,250);  // E
-						Beep(523,250);  // C
-						Beep(440,250);  // A
-						Beep(587,250);  // D
-						Beep(784,500);  // G
-						Sleep(2000);
+						mainTritone();
+						remainingTheme();
+						textPauseLong();
 						return 0;
 					}
 
@@ -1207,25 +1025,17 @@ int partI()
 
 					else if (input == 'B')
 					{
-						Beep(523,125);  // C
+						confirmationBeep();
 						cout << endl;
 						cout << "You tried to run but you were shot down." << endl;
-						Beep(440,500);  // A
+						firePhaser();
 						cout << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
-						Sleep(1000);
+						mainTritone();
+						textPause();
 						cout << "Game Over" << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
-						Beep(659,250);  // E
-						Beep(523,250);  // C
-						Beep(440,250);  // A
-						Beep(587,250);  // D
-						Beep(784,500);  // G
-						Sleep(2000);
+						mainTritone();
+						remainingTheme();
+						textPauseLong();
 						return 0;
 					}
 
@@ -1233,44 +1043,32 @@ int partI()
 
 					else if (input == 'C')
 					{
-						Beep(523,125);  // C
-						Sleep(1000);
+						confirmationBeep();
+						textPause();
 						cout << endl;
 						cout << "You took the security guards phaser." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						cout << endl;
-						Sleep(1000);
+						textPause();
 						cout << "Do you A. Shoot the judge. B. Take someone hostage and try to escape, shoot several people to make the point you will shoot." << endl;
 						cout << "or C. Set the phaser to wide-beam kill and shoot." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						cout << endl;
-						Sleep(1000);
+						textPause();
 						cin >> input;
 						if (input == 'A')
 						{
-							Beep(523,125);  // C
-							Sleep(1000);
+							confirmationBeep();
+							textPause();
 							cout << "Nice shot, however a split second later you were killed." << endl;
-							Beep(440,500);  // A
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							firePhaser();
+							mainTritone();
+							textPause();
 							cout << endl;
 							cout << "Game Over" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Beep(659,250);  // E
-							Beep(523,250);  // C
-							Beep(440,250);  // A
-							Beep(587,250);  // D
-							Beep(784,500);  // G
-							Sleep(2000);
+							mainTritone();
+							remainingTheme();
+							textPauseLong();
 							return 0;
 						}
 
@@ -1278,33 +1076,23 @@ int partI()
 
 						if (input == 'B' || input == 'C')
 						{
-							Beep(523,125);  // C
-							Beep(440,500);  // A
-							Sleep(1000);
+							confirmationBeep();
+							firePhaser();
+							textPause();
 							cout << "Well done, now you begin your life as an outlaw and a mass murderer." << endl;
 							cout << "Wait, wasn't the point to become a starfleet officer?" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							cout << endl;
 							Sleep(3000);
 							cout << "Oh by the way, you forgot one thing. The transporter." << endl;
 							cout << "Space has pretty thin air don't you think?" << endl;
 							cout << endl; 
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(2000);
+							mainTritone();
+							textPauseLong();
 							cout << "Game Over" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Beep(659,250);  // E
-							Beep(523,250);  // C
-							Beep(440,250);  // A
-							Beep(587,250);  // D
-							Beep(784,500);  // G
-							Sleep(2000);
+							mainTritone();
+							remainingTheme();
+							textPauseLong();
 							return 0;
 						}
 					}
@@ -1316,82 +1104,60 @@ int partI()
 
 			else if (karma == -1 || karma == 1)
 			{
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Beep(659,250);  // E
-				Beep(523,250);  // C
-				Beep(440,250);  // A
-				Beep(587,250);  // D
-				Beep(784,500);  // G
-				Sleep(1000);
-				Beep(523,125);  // C
+				mainTritone();
+				remainingTheme();
+				textPause();
+				confirmationBeep();
 				storyProgress = 2;
 				cout << endl;
 				cout << "-*You arive at the Ship Dock.*-" << endl;
 				cout << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(2000);
+				mainTritone();
+				textPauseLong();
 				cout << "Unknown Captain: Hello I am Captain Alan and I will be designating you to" << endl;
 				cout << "your ships." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				Sleep(3000);
 				cout << endl;
 				cout << "Captain Alan: Parsins, Parvati, Rudolph, Zachary, you will be" << endl;
 				cout << "reporting to Captain Zephren." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << endl;
 				Sleep(3000);
 				cout << "Captain Alan: Roberto, Jonathan, Patrick, Kevin, you will" << endl;
 				cout << "be coming with Captain Jamerson." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << endl;
 				Sleep(3000);
 				do
 				{
 					cout << "Do you, A. Walk away. B.Go to Captain Jamerson or C. Shoot everyone." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
-					Sleep(1000);
+					mainTritone();
+					textPause();
 					cin >> input;
 				
 					if (input == 'A')
 					{
-						Beep(523,125);  // C
-						Sleep(1000);
+						confirmationBeep();
+						textPause();
 						cout << endl;
 						cout << "Captain Jamerson. Hey! Your supposed to come to me!." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 					}
 					else if (input == 'C')
 					{
-						Beep(523,125);  // C
-						Sleep(1000);
+						confirmationBeep();
+						textPause();
 						cout << "Seriously. Are you this homicidal. I'm going to save you from Game" << endl;
 						cout << "Over and restarting the whole game. Try again." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 					}
 					else if (input == 'B')
 					{
-						Beep(523,125);  // C
-						Sleep(1000);
+						confirmationBeep();
+						textPause();
 						cout << "-*You walk to Captain Jamerson*-" << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						dl1 = true;
 					}
 				}while (!dl1);
@@ -1399,180 +1165,81 @@ int partI()
 	//Beta Section Episilon
 			cout << "Captain Jamerson: Welcome to the crew. We will have a welcome party over" << endl;
 			cout << "in the ship Mess Hall." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
+			mainTritone();
+			textPause();
 			cout << "-*You walk into the ship*-" << endl;
 			cout << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(500);
+			mainTritone();
+			textPauseShort();
 			cout << "There are several corriders with signs leading to an area." << endl;
 			cout << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			cout << "The left corrider goes to the weapons locker." << endl;
 			cout << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(3000);
+			mainTritone();
+			textPauseLong();
 			cout << "The middle corrider goes to engineering." << endl;
 			cout << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(2000);
+			mainTritone();
+			textPauseLong();
 			cout << "The right corrider goes to the mess hall." << endl;
 			cout << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(2000);
+			mainTritone();
+			textPauseLong();
 			cout << endl;
 			
 			do
 			{
 				cout << "Do you go A. Left. B. Forward. Or C. Right." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cin >> input;
 				if (input == 'A')
 				{
-					Beep(523,125);  // C
+					confirmationBeep();
 					cout << "Captain Jamerson: And why would you go to the weapons locker Ensign?" << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 				}
 				else if (input == 'B')
 				{
-					Beep(523,125);  // C
+					confirmationBeep();
 					cout << "Engineer: You're not supposed to be in here." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 				}
 				else if (input == 'C')
 				{
-					Beep(523,125);  // C
+					confirmationBeep();
 					cout << "-*You hear distant murmering*-" << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					dl2 = true;
 				}
 			}while (!dl2);
 			cout << "Officer: Hi there, we just got out the piano. Do you want to play a song?" << endl;
 			cout << "You say A.Sure B.No C. ... " << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			cin >> input;
 			if (input == 'A')
 			{
-				Beep(523,125);  // C
+				confirmationBeep();
 				cout << endl;
-				Sleep(1000);
+				textPause();
 				cout << "-*You start playing*-" << endl;
 				cout << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(2000);
-				Beep (659,220);
-				Beep (0,220);
-				Beep (622,220);
-				Beep (0,220);		
-				Beep (659,220); 
-				Beep (0,220);
-				Beep (622,220);
-				Beep (0,220);
-				Beep (659,220);
-				Beep (0,220);
-				Beep (494,220); 
-				Beep (0,220);
-				Beep (587,220); 
-				Beep (0,220);
-				Beep (523,220); 
-				Beep (0,220);
-				Beep (440,220);  
-				Beep (0,240);
-				Beep (262,220); 
-				Beep (0,220);
-				Beep (330,220);  
-				Beep (0,220);
-				Beep (440,220);  
-				Beep (0,220);
-				Beep (494,220);  
-				Beep (0,240);
-				Beep (330,220);  
-				Beep (0,220);
-				Beep (415,220);  
-				Beep (0,220);
-				Beep (494,220);  
-				Beep (0,220);
-				Beep (523,220);  
-				Beep (0,240);
-				Beep (330,220);  
-				Beep (0,220);
-				Beep (659,220);  
-				Beep (0,220);
-				Beep (622,220); 
-				Beep (0,220);
-				Beep (659,220);
-				Beep (0,220);
-				Beep (622,220);  
-				Beep (0,220);
-				Beep (659,220); 
-				Beep (0,220);
-				Beep (494,220); 
-				Beep (0,220);
-				Beep (587,220); 
-				Beep (0,220);
-				Beep (523,220); 
-				Beep (0,220);
-				Beep (440,220); 
-				Beep (0,240);
-				Beep (262,220); 
-				Beep (0,220);
-				Beep (330,220); 
-				Beep (0,220);
-				Beep (440,220);  
-				Beep (0,220);
-				Beep (494,220);  
-				Beep (0,240);
-				Beep (330,220);  
-				Beep (0,220);
-				Beep (523,220);  
-				Beep (0,220);
-				Beep (494,220); 
-				Beep (0,240);
-				Beep (440,220);
-
-				Sleep(2000);
+				mainTritone();
+				textPauseLong();
+				beepFurElise();
+				textPauseLong();
 				cout << "-*Clap Clap Clap Clap Clap Clap*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << "Wonderful!" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 			}
 			else if (input == 'B' || input == 'C')
 			{
-				Beep(523,125);  // C
+				confirmationBeep();
 				cout << "Your desision." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 			}
 		}
 
@@ -1582,307 +1249,208 @@ int partI()
 
 		else if (skipPoints == "No")
 		{
-			Beep(523,125);  // C
+			confirmationBeep();
 			cout << "Hmph. I thought you wanted to play. I guess I was wrong." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(2000);
+			mainTritone();
+			textPauseLong();
 			cout << "GAME OVER" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Beep(659,250);  // E
-			Beep(523,250);  // C
-			Beep(440,250);  // A
-			Beep(587,250);  // D
-			Beep(784,500);  // G
+			mainTritone();
+			remainingTheme();
 			return 0;
 		}
 	//Beta Section Gamma
 		cout << "-*The Party Ends*-" << endl;
 		cout << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
-		Sleep(1000);
+		mainTritone();
+		textPause();
 		cout << "Com:All hands battlestations!" << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
-		Sleep(1000);
+		mainTritone();
+		textPause();
 		cout << "Officer: Ensign report to the bridge." << endl;
-		Beep(392,250);  // G
-		Beep(523,125);  // C
-		Beep(698,500);  // F
-		Sleep(1000);
+		mainTritone();
+		textPause();
 
 		do
 		{
 			cout << "Do you A.Go to the Bridge. B. Go to Engineering. Or C. The Shuttlebay." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			cin >> input;
 			if (input == 'A')
 			{
-				Beep(523,125);  // C
-				Sleep(1000);
+				confirmationBeep();
+				textPause();
 				cout << "-*The Ship Shakes*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << endl;
-				Sleep(500);
+				textPauseShort();
 				cout << "You run to the bridge. On the way you see an injured crewman." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << "Crewman: *Gasp* Please help me." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << "Do you A. Help the crewman or B. continue on your way." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cin >> input;
 				if (input == 'A')
 				{
-					Beep(523,125);  // C
+					confirmationBeep();
 					cout << "-*You help the crewman to get to sickbay.*-" << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cout << endl;
-					Sleep(1000);
+					textPause();
 					karma++;
 				}
 				else if (input == 'B' || input == 'A')
 				{
 					cout << "-*You continue to the bridge.*-" << endl;
 					cout << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
-					Sleep(1000);
+					mainTritone();
+					textPause();
 				}
 				if (true)
 				{
 
 					cout << "Captain Jamerson: Kevin, take a station. Tactical, Com, or Operations." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
-					Sleep(3000);
+					mainTritone();
 					cin >> shipPositionClass;
 
 	//Beta Section Theta Alpha
 
 					if (shipPositionClass == "Tactical")
 					{
-						Beep(523,125);  // C
+						confirmationBeep();
 						cout << "Captain Jamerson: Charge Phasers." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
-						Sleep(1000);
+						mainTritone();
+						textPause();
 						cout << "Target enemy ship" << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
-						Sleep(1000);
+						mainTritone();
+						textPause();
 						cout << "Attack pattern Alpha" << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
-						Sleep(2000);
+						mainTritone();
+						textPauseLong();
 						cout << "A. Charge Phasers, B. Fire Phasers." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
-						Sleep(2000);
+						mainTritone();
+						textPauseLong();
 						cin >> input;
 						if (input == 'A')
 						{
-							Beep(523,125);  // C
-							Sleep(1000);
+							confirmationBeep();
+							textPause();
 							cout << "Charging Phasers." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << "Captain Jamerson: Fire!" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << "A. Fire Phasers. B. Do Nothing." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							cin >> input;
 							if (input == 'A')
 							{
-								Beep(523,125);  // C
+								confirmationBeep();
 								cout << "Firing Phasers." << endl;
-								Beep(440,500);  // A
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								firePhaser();
+								mainTritone();
+								textPause();
 								cout << "Operations Officer: Enemy destroyed!." << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								mainTritone();
+								textPause();
 								cout << "What were we shooting at?" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								mainTritone();
+								textPause();
 								cout << "Captain Jamerson: Klingon ship." << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								dl3 = true;
 							}
 							else if (input == 'B')
 							{
-								Beep(523,125);  // C
+								confirmationBeep();
 								cout << "Captain Jamerson: What are you doing! Fire Phasers!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								mainTritone();
+								textPause();
 								cout << "Firing Phasers." << endl;
-								Beep(440,500);  // A
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								firePhaser();
+								mainTritone();
+								textPause();
 								cout << "Operation Officer: Enemy destroyed!." << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								mainTritone();
+								textPause();
 								cout << "What were we whooting at?" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								mainTritone();
+								textPause();
 								cout << "Captain Jamerson: Klingon ship. Now tell me why didn't you fire!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								mainTritone();
+								textPause();
 								cout << "Sorry, I suppose I was distracted." << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								mainTritone();
+								textPause();
 								cout << "Captain Jamerson: Well be more focused next time." << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								dl3 = true;
 							}
 						}
 						else if (input == 'B')
 						{
-							Beep(523,125);  // C
-							Sleep(1000);
+							confirmationBeep();
+							textPause();
 							cout << "-*Phasers aren't firing sir.*-" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << "Captain Jamerson: Try charging them." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << "Charging Phasers." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << "Captain Jamerson: Fire!" << endl;
-							Beep(440,500);  // A
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							firePhaser();
+							mainTritone();
+							textPause();
 							cout << "A. Fire Phasers. B. Do Nothing." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							cin >> input;
 							if (input == 'A')
 							{
-								Beep(523,125);  // C
+								confirmationBeep();
 								cout << "Firing Phasers." << endl;
-								Beep(440,500);  // A
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								firePhaser();
+								mainTritone();
+								textPause();
 								cout << "Operations Officer: Enemy destroyed!." << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								mainTritone();
+								textPause();
 								cout << "What were we shooting at?" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								mainTritone();
+								textPause();
 								cout << "Captain Jamerson: Klingon ship." << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								dl3 = true;
 							}
 							else if (input == 'B')
 							{
-								Beep(523,125);  // C
+								confirmationBeep();
 								cout << "Captain Jamerson: What are you doing! Fire Phasers!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								mainTritone();
+								textPause();
 								cout << "Firing Phasers." << endl;
-								Beep(440,500);  // A
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								firePhaser();
+								mainTritone();
+								textPause();
 								cout << "Operation Officer: Enemy destroyed!." << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								mainTritone();
+								textPause();
 								cout << "What were we whooting at?" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								mainTritone();
+								textPause();
 								cout << "Captain Jamerson: Klingon ship. Now tell me why didn't you fire!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								mainTritone();
+								textPause();
 								cout << "Sorry, I suppose I was distracted." << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Sleep(1000);
+								mainTritone();
+								textPause();
 								cout << "Captain Jamerson: Well be more focused next time." << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								dl3 = true;
 							}
 						}
@@ -1892,115 +1460,79 @@ int partI()
 
 					else if (shipPositionClass == "Operations")
 					{
-						Beep(523,125);  // C
-						Sleep(1000);
+						confirmationBeep();
+						textPause();
 						cout << "Captain Jamerson: Target the ship." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
-						Sleep(2000);
+						mainTritone();
+						textPauseLong();
 						cout << "Captain Jamerson: Attack Pattern Alpha" << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
-						Sleep(2000);
+						mainTritone();
+						textPauseLong();
 						cout << "Captain Jamerson: Charge phasers." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
-						Sleep(2000);
+						mainTritone();
+						textPauseLong();
 						cout << "A. Target Starbase B. Target Klingon Ship." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
-						Sleep(1000);
+						mainTritone();
+						textPause();
 						cin >> input;
 						if (input == 'A')
 						{
-							Beep(523,125);  // C
-							Sleep(1000);
+							confirmationBeep();
+							textPause();
 							cout << "Tactical fire phasers." << endl;
-							Beep(440,500);  // A
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							firePhaser();
+							mainTritone();
+							textPause();
 							cout << "Captain Jamerson: What the. Who issued the command to target" << endl;
 							cout << "the station?" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << "Tactical: The command was issued from the.. Com..." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << "Security: Klingon Spy!" << endl;
-							Beep(440,500);  // A
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(750);
+							firePhaser();
+							mainTritone();
+							textPause();
 							cout << "Congradualtions. Your dead. Accused of being a Klingon Spy." << endl;
 							cout << "If you actually were a Klingon, you'd be ecstatic of dieing in battle." << endl;
 							cout << endl; 
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(2000);
+							mainTritone();
+							textPauseLong();
 							cout << "Game Over" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Beep(659,250);  // E
-							Beep(523,250);  // C
-							Beep(440,250);  // A
-							Beep(587,250);  // D
-							Beep(784,500);  // G
-							Sleep(2000);
+							mainTritone();
+							remainingTheme();
+							textPauseLong();
 							return 0;						
 						}
 						else if (input == 'B')
 						{
-							Beep(523,125);  // C
-							Sleep(1000);
+							confirmationBeep();
+							textPause();
 							cout << endl;
 							cout << "Captain JamersonL Target enemy ship." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(2000);
+							mainTritone();
+							textPauseLong();
 							cout << "Captain Jamerson: Charge Phasers." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << endl;
 							cout << "Tactical: Phasers charged." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << endl;
 							cout << "Captain Jamerson: Fire!"<< endl;
-							Beep(440,500);  // A
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							firePhaser();
+							mainTritone();
+							textPause();
 							cout << endl;
 							cout << "Tactical: What were we shooting at?" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << endl;
 							cout << "Captain Jamerson: Klingon ship." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << endl;
 							dl3 = true;
 						}
@@ -2010,104 +1542,72 @@ int partI()
 
 					else if (shipPositionClass == "Com")
 					{
-						Beep(523,125);  // C
-						Sleep(1000);
+						confirmationBeep();
+						textPause();
 						cout << "Captain Jamerson: Attack Pattern Alpha!" << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
-						Sleep(1000);
+						mainTritone();
+						textPause();
 						cout << "A. Randomly press buttons. B.Go to Warp. C. Look up in" << endl;
 						cout << "the database how to do Attack Pattern Alpha." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
-						Sleep(1000);
+						mainTritone();
+						textPause();
 						cin >> input;
 						if (input == 'A')
 						{
-							Beep(523,125);  // C
+							confirmationBeep();
 							cout << "Self Destruct Initiated." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << "Game Over" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Beep(659,250);  // E
-							Beep(523,250);  // C
-							Beep(440,250);  // A
-							Beep(587,250);  // D
-							Beep(784,500);  // G
-							Sleep(2000);
+							mainTritone();
+							remainingTheme();
+							textPauseLong();
 							return 0;
 						}
 						else if (input == 'B')
 						{
-							Beep(523,125);  // C
+							confirmationBeep();
 							cout << "Well guess what. You just warped into the starbase. Die with style" << endl;
 							cout << "I suppose." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << "Game Over" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Beep(659,250);  // E
-							Beep(523,250);  // C
-							Beep(440,250);  // A
-							Beep(587,250);  // D
-							Beep(784,500);  // G
-							Sleep(2000);
+							mainTritone();
+							remainingTheme();
+							textPauseLong();
 							return 0;
 						}
 						else if (input == 'C')
 						{
-							Beep(523,125);  // C
-							Sleep(500);
+							confirmationBeep();
+							textPauseShort();
 							cout << "To initiate attack pattern alpha. Tell the computer to" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << "engage engines and keep a radius of 100 kilometers and circle around the" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << "enemy by a constant right turn." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(500);
+							mainTritone();
+							textPauseShort();
 
 							do
 							{
 								cout << "A. Engage engines and keep A radius of 100 kilometers. B. Circle enemy" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cin >> input;
 								if (input == 'A')
 								{
-									Beep(523,125);  // C
+									confirmationBeep();
 									cout << "Keeping a radius of 100 kilometers..." << endl;
-									Beep(392,250);  // G
-									Beep(523,125);  // C
-									Beep(698,500);  // F
+									mainTritone();
 									dl4 = true;
 								}
 								else if (input == 'B')
 								{
-									Beep(523,125);  // C
+									confirmationBeep();
 									cout << "Unable to comply. Engines offline." << endl;
-									Beep(392,250);  // G
-									Beep(523,125);  // C
-									Beep(698,500);  // F
+									mainTritone();
 								}
 							}while (!dl4);
 
@@ -2116,62 +1616,42 @@ int partI()
 							do
 							{
 								cout << "A. Engage engines and keep A radius of 100 kilometers. B. Circle enemy" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cin >> input;
 								if (input == 'A')
 								{
-									Beep(523,125);  // C
+									confirmationBeep();
 									cout << "Unable to comply, already done." << endl;
-									Beep(392,250);  // G
-									Beep(523,125);  // C
-									Beep(698,500);  // F
+									mainTritone();
 								}
 								else if (input == 'B')
 								{
-									Beep(523,125);  // C
+									confirmationBeep();
 									cout << "Circling Enemy Ship..." << endl;
-									Beep(392,250);  // G
-									Beep(523,125);  // C
-									Beep(698,500);  // F
+									mainTritone();
 									dl5 = true;
 								}
 							}while (!dl5);
 							cout << "Captain Jamerson: Operations, target the enemy ship. Tactical charge phasers." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << "Operations: Target locked" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							cout << "Tactical: Phasers Charged." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(2000);
+							mainTritone();
+							textPauseLong();
 							cout << "Captain Jamerson: Fire Phasers!" << endl;
-							Beep(440,500);  // A
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							firePhaser();
+							mainTritone();
+							textPause();
 							cout << "Captain Jamerson: Enemy destroyed." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << "Tactical: Who was the enemy." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
-							Sleep(1000);
+							mainTritone();
+							textPause();
 							cout << "Captain Jamerson: Klingon Ship." << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							dl3 = true;
 						}
 					}
@@ -2182,32 +1662,22 @@ int partI()
 
 			else if (input == 'B')
 			{
-				Beep(523,125);  // C
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				confirmationBeep();
+				mainTritone();
 				cout << "Engineer: What are you doing here?" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << "-*Engineer Looks at Your Uniform*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << "Your supposed to be in the bridge." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 			}
 			else if (input == 'C')
 			{
-				Beep(523,125);  // C
+				confirmationBeep();
 				cout << "Ahem are you trying to escape the ship?" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 			}
 		}while(!dl3);
 
@@ -2215,273 +1685,213 @@ int partI()
 		if (true)
 		{
 			cout <<"-*Door Opens*- "<< endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 		
 			cout <<"Klingon: For the high command!" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
+			mainTritone();
+			textPause();
 			cout <<"-*Klingon Fires a Disruptor at the Captain*-"<< endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
+			mainTritone();
+			textPause();
 			cout <<"A. Shoot the Klingon B. Do nothing"<< endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			cin >> input;
 		}
 			if (input == 'A')
 			{
-				Beep(523,125);  // C
+				confirmationBeep();
 				cout << "You shot the Klingon" << endl;
-				Beep(440,500);  // A
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				firePhaser();
+				mainTritone();
+				textPause();
 				popularity = 1;
 			}
 
 			else if (input == 'B')
 			{
-				Beep(523,125);  // C
+				confirmationBeep();
 				cout << "Security: Die Klingon!" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << "-*Phaser Blast*-" << endl;
-				Beep(440,500);  // A
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				firePhaser();
+				mainTritone();
+				textPause();
 			}
 			cout << "-*Beep Beep*-" << endl;
 			Beep(923,125);  
-			Sleep(500);
+			textPauseShort();
 			Beep(923,125);  
-			Sleep(1000);
+			textPause();
 			cout << "Commander: Three D-7s have dropped out of warp." << endl;
 			Beep(923,125);  
-			Sleep(500);
+			textPauseShort();
 			Beep(923,125);  
-			Sleep(1000);
+			textPause();
 			cout << "Commander: They are targeting the station!" << endl;
-			Sleep(1000);
+			textPause();
 			cout << "They are firing!" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
-			Beep(440,500);  // A
-			Sleep(500);
-			Beep(440,750);  // A
+			mainTritone();
+			textPause();
+			firePhaser();
+			textPauseShort();
+			firePhaserLong();
 			Sleep(250);
-			Beep(440,250);  // A
+			firePhaserShort();
 			Sleep(600);
-			Beep(440,750);  // A
-			Sleep(100);
-			Beep(440,500);  // A
-			Sleep(1000);
+			firePhaserLong();
+			textPauseMicro();
+			firePhaser();
+			textPause();
 
 		if (shipPositionClass == "Tactical")
 		{
 			cout << "Kevin arm and fire phasers!" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
+			mainTritone();
+			textPause();
 			cout << "A.Arm & Fire phasers. B.Shoot the rest of the crew." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			cin >> input;
 			if (input == 'A')
 			{
 				cout << "Firing Phasers" << endl;
-				Beep(440,500);  // A
-				Sleep(1000);
+				firePhaser();
+				textPause();
 				cout << "Commander: We are being targeted. They are firing!" << endl;
-				Beep(440,500);  // A
-				Sleep(100);
-				Beep(440,250);  // A
-				Sleep(100);
-				Beep(440,750);  // A
+				firePhaser();
+				textPauseMicro();
+				firePhaserShort();
+				textPauseMicro();
+				firePhaserLong();
 				cout << "-*Explosions all around*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << "-*You are the last person left on the bridge*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 			}
 			else if (input == 'B')
 			{
 				cout << "-*You shoot all the rest of the crew*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << "-*You are the last person left on the bridge*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 			}
 		}
 		if (shipPositionClass == "Operations")
 		{
 			cout << "Kevin Target the ship!!" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
+			mainTritone();
+			textPause();
 			cout << "A. Target enemy. B.Shoot the rest of the crew." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			cin >> input;
 			if (input == 'A')
 			{
 				cout << "Firing Phasers" << endl;
-				Beep(440,500);  // A
-				Sleep(1000);
+				firePhaser();
+				textPause();
 				cout << "Commander: We are being targeted. They are firing!" << endl;
-				Beep(440,500);  // A
-				Sleep(100);
-				Beep(440,250);  // A
-				Sleep(100);
-				Beep(440,750);  // A
+				firePhaser();
+				textPauseMicro();
+				firePhaserShort();
+				textPauseMicro();
+				firePhaserLong();
 				cout << "-*Explosions all around*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << "-*You are the last person left on the bridge*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 			}
 			else if (input == 'B')
 			{
 				cout << "-*You shoot all the rest of the crew*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << "-*You are the last person left on the bridge*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 			}
 		}
 
 		if (shipPositionClass == "Com")
 		{
 			cout << "Kevin Manuvers Alpha!" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
+			mainTritone();
+			textPause();
 			cout << "A. Start Manuvers. B.Shoot the rest of the crew." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			cin >> input;
 			if (input == 'A')
 			{
 				cout << "Firing Phasers" << endl;
-				Beep(440,500);  // A
-				Sleep(1000);
+				firePhaser();
+				textPause();
 				cout << "Commander: We are being targeted. They are firing!" << endl;
-				Beep(440,500);  // A
-				Sleep(100);
-				Beep(440,250);  // A
-				Sleep(100);
-				Beep(440,750);  // A
+				firePhaser();
+				textPauseMicro();
+				firePhaserShort();
+				textPauseMicro();
+				firePhaserLong();
 				cout << "-*Explosions all around*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << "-*You are the last person left on the bridge*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 			}
 			else if (input == 'B')
 			{
 				cout << "-*You shoot all the rest of the crew*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << "-*You are the last person left on the bridge*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 			}
 		}
 		if (true)
 		{
-			Sleep(1000);
+			textPause();
 			cout << "A. Take Tactical Position B. Surrender" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			cin >> input;
 		}
 			if (input == 'A')
 			{
 				cout << "Phasers and Torpedoes fire everywhere." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
-				Beep(440,500);  // A
-				Sleep(500);
-				Beep(440,750);  // A
+				mainTritone();
+				mainTritone();
+				textPause();
+				firePhaser();
+				textPauseShort();
+				firePhaserLong();
 				Sleep(250);
-				Beep(440,250);  // A
+				firePhaserShort();
 				Sleep(600);
 	//2014!
-				Beep(440,750);  // A
-				Sleep(100);
-				Beep(440,500);  // A
-				Sleep(1000);
+				firePhaserLong();
+				textPauseMicro();
+				firePhaser();
+				textPause();
 				cout << "-----        ------                   --" << endl;
 				cout << "   -        -||||||-                o---|" << endl;
 				cout << "    -------------                     --" << endl;
 				cout << endl;
 				cout << endl;
 				cout << endl;
-				Sleep(1000);
+				textPause();
 				cout << "-----        ------                --" << endl;
 				cout << "   -        -||||||-0------------o---|" << endl;
 				cout << "    -------------                  --" << endl;
 				cout << endl;
 				cout << endl;
 				cout << endl;
-				Sleep(1000);
+				textPause();
 				cout << "-----        ------               +|+" << endl;
 				cout << "   -        -||||||-            (+-O-+)" << endl;
 				cout << "    -------------                 +|+" << endl;
-				Sleep(2000);
+				textPauseLong();
 				cout << "One Klingon K'vort ship is approaching at fast warp." << endl;
 				cout << "Phasers work best on shields and do half damege to hull. Photons work the other way around." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				dl6 = false;
 		do
 			{
@@ -2511,9 +1921,7 @@ int partI()
 
 					cout << "Enemy Shields:" << SenemyShields << endl;
 					cout << "Shields:" << shields << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					if (SenemyShields < 1)
 					{
 						SenemyHull = SenemyHull - (phasers/2);
@@ -2534,9 +1942,7 @@ int partI()
 					if(SenemyShields < 1)
 					{
 						cout << "Enemy Shields are Down!" << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 					}
 				}
 				else if (input == 'B')
@@ -2600,40 +2006,22 @@ int partI()
 			else
 			{
 				cout << "Do you know how Klingons treat their prisoners?" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << "Klingons don't take prisoners unless it's nessicary" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << "You were shot and killed." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(2000);
+				mainTritone();
+				textPauseLong();
 				cout << "GAME OVER" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Beep(659,250);  // E
-				Beep(523,250);  // C
-				Beep(440,250);  // A
-				Beep(587,250);  // D
-				Beep(784,500);  // G
-				Sleep(2000);
+				mainTritone();
+				remainingTheme();
+				textPauseLong();
 				return 0;
 			}
 		
 			cout << "End of Tutorial" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Beep(659,250);  // E
-			Beep(523,250);  // C
-			Beep(440,250);  // A
-			Beep(587,250);  // D
-			Beep(784,500);  // G
+			mainTritone();
+			remainingTheme();
 
 
 			
@@ -2641,52 +2029,36 @@ int partI()
 		}
 		cout << "Star Trek Adventure" << endl;
 			cout << "Part II - Where No One Has Gone Before" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Beep(659,250);  // E
-			Beep(523,250);  // C
-			Beep(440,250);  // A
-			Beep(587,250);  // D
-			Beep(784,500);  // G
+			mainTritone();
+			remainingTheme();
 			cout << endl;
 			cout << endl;
 
 
 
-			Sleep(2000);
+			textPauseLong();
 			cout << "5 Days After The Battle of Starbase 78" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
+			mainTritone();
+			textPause();
 			cout << endl;
 			cout << "Admiral Preston: Kevin, I promote you to Captain. And offer you your first command." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
+			mainTritone();
+			textPause();
 			cout << endl;
 			cout << "Admiral Preston: Do you wish to take command of the Avenger, a Defiant class ship." << endl;
 			cout << "Speciallizing in Evasive Manuvers and Combat." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1500);
+			mainTritone();
+			textPause();
 			cout << endl;
 			cout << "Admiral Preston: Do you wish to take command of the Solstace, a Nova class ship." << endl;
 			cout << "Speciallizing in Evasive Manuvers, Warp Speed, and Science." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1500);
+			mainTritone();
+			textPause();
 			cout << endl;
 			cout << "Admiral Preston: Or do you wish to take command of the Breakpoint, a Ambassador class ship." << endl;
 			cout << "Well rounded on Warp Speed, Combat, and Science, however has low manuverability." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1500);
+			mainTritone();
+			textPause();
 			
 		
 		if (true)
@@ -2694,18 +2066,14 @@ int partI()
 			do
 			{
 				cout << "Avenger, Solstace, or Breakpoint?" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << endl;
 				cout << endl;
 				cin >> shipName;
 				if(shipName == "Avenger")
 				{
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					shipType = "Destroyer";
 					shipClass = "Defiant";
 					shields = defiantShields;
@@ -2718,9 +2086,7 @@ int partI()
 				}
 				else if(shipName == "Solstace")
 				{
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					shipType = "Scout";
 					shipClass = "Nova";
 					shields = novaShields;
@@ -2733,9 +2099,7 @@ int partI()
 				}
 				else if(shipName == "Breakpoint")
 				{
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					shipType = "Cruiser";
 					shipClass = "Ambassador";
 					shields = ambassadorShields;
@@ -2748,9 +2112,7 @@ int partI()
 				}
 				else if(shipName == "EnterpriseE")
 				{
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					shipType = "Battleship";
 					shipClass = "Solvereign";
 					shields = solvereignShields;
@@ -2762,22 +2124,16 @@ int partI()
 					dl6 = true;
 				}
 			}while (!dl6);
-			Sleep(1000);
+			textPause();
 			cout << "You have chosen the " << shipName << " a " << shipClass << " class starship." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
+			mainTritone();
+			textPause();
 			cout << "Lets test it in a simulator." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(2000);
+			mainTritone();
+			textPauseLong();
 
 			cout << "Klingon Destroyer K'riath, a K'vort class ship is approaching at high warp." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			a = false;
 			
 			do
@@ -2786,9 +2142,7 @@ int partI()
 					cin >> input;
 					if (input == 'A')
 					{
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						
 
 						srand(static_cast<unsigned int>(time(0)));
@@ -2847,9 +2201,7 @@ int partI()
 						if(SenemyShields < 1)
 						{
 							cout << "Enemy Shields are Down!" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							SenemyShields = 0;
 						}
 						if (shields < 1)
@@ -2877,9 +2229,7 @@ int partI()
 					}
 					else if (input == 'B')
 					{
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						
 
 						srand(static_cast<unsigned int>(time(0)));
@@ -2938,9 +2288,7 @@ int partI()
 						if(SenemyShields < 1)
 						{
 							cout << "Enemy Shields are Down!" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							SenemyShields = 0;
 						}
 						if (shields < 1)
@@ -2981,9 +2329,7 @@ int partI()
 						
 						if(shipName == "Avenger")
 						{
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							shipType = "Destroyer";
 							shipClass = "Defiant";
 							shields = defiantShields;
@@ -2996,9 +2342,7 @@ int partI()
 						}
 						else if(shipName == "Solstace")
 						{
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							shipType = "Scout";
 							shipClass = "Nova";
 							shields = novaShields;
@@ -3011,9 +2355,7 @@ int partI()
 						}
 						else if(shipName == "Breakpoint")
 						{
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							shipType = "Cruiser";
 							shipClass = "Ambassador";
 							shields = ambassadorShields;
@@ -3026,9 +2368,7 @@ int partI()
 						}
 						else if(shipName == "EnterpriseE")
 						{
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							shipType = "Battleship";
 							shipClass = "Solvereign";
 							shields = solvereignShields;
@@ -3042,35 +2382,23 @@ int partI()
 				}
 				cout << "Nice match. However there is a situation and we have" << endl;
 				cout << "mobilized a small task force at Tou Signa V" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << "You are assigned to the task force to defeat the enemy Starbase" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				if (true)
 				{
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					a = false;
 					cout << "We will give you a makeshift crew for this mission." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
-					Sleep(1000);
+					mainTritone();
+					textPause();
 					cout << "Arriving at Tou Signa V" << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
-					Sleep(1000);
+					mainTritone();
+					textPause();
 					cout << "Sir, We are detecting 4 other Federation ships combating" << endl;
 					cout << "The Klingon Starbase." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					AfleetNumber = 4;
 					a = false;
 					do
@@ -3081,9 +2409,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -3180,23 +2506,15 @@ int partI()
 								kratHull = 0;
 								cout << "Enemy Starbase Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(kratShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								kratShields = 0;
 							}
@@ -3224,9 +2542,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -3320,23 +2636,15 @@ int partI()
 								kratHull = 0;
 								cout << "Enemy Starbase Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(kratShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								kratShields = 0;
 							}
@@ -3376,9 +2684,7 @@ int partI()
 							
 							if(shipName == "Avenger")
 							{
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								shipType = "Destroyer";
 								shipClass = "Defiant";
 								shields = defiantShields;
@@ -3391,9 +2697,7 @@ int partI()
 							}
 							else if(shipName == "Solstace")
 							{
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								shipType = "Scout";
 								shipClass = "Nova";
 								shields = novaShields;
@@ -3406,9 +2710,7 @@ int partI()
 							}
 							else if(shipName == "Breakpoint")
 							{
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								shipType = "Cruiser";
 								shipClass = "Ambassador";
 								shields = ambassadorShields;
@@ -3421,9 +2723,7 @@ int partI()
 							}
 							else if(shipName == "EnterpriseE")
 							{
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								shipType = "Battleship";
 								shipClass = "Solvereign";
 								shields = solvereignShields;
@@ -3439,71 +2739,51 @@ int partI()
 			}
 					
 			cout << "Setting Course to Starbase 78." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
-			Sleep(1000);
+			mainTritone();
+			textPause();
+			textPause();
 			cout << "Admiral Decker: Captain Novatia, as the current crises is over." << endl;
 			cout << "You will be given your crew." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			cout << endl;
-			Sleep(1000);
+			textPause();
 			cout << "Your Commander is Commander Keith Benning." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			cout << endl;
-			Sleep(1000);
+			textPause();
 			cout << "Commander Keith: Hello Sir." << endl;
 			cout << endl;
-			Sleep(1000);
+			textPause();
 			cout << "Your Operations Officer is Ensign Ethan Niron." << endl;
 			cout << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
+			mainTritone();
+			textPause();
 			cout << "-*Ensign Ethan Nods*-" << endl;
 			cout << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
+			mainTritone();
+			textPause();
 			cout << "Tactical is Luitenent Commander Jay Parkinsons" << endl;
 			cout << "He is also your Security Chief." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
+			mainTritone();
 			cout << endl;
-			Beep(698,500);  // F
-			Sleep(1000);
+			textPause();
 			cout << "Your Chief Engineer is Blake Finery" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
+			mainTritone();
+			textPause();
 			cout << endl;
 			cout << "Your Doctor is Zachary Iona." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			mainTritone();
 			cout << endl;
-			Sleep(1000);
+			textPause();
 			cout << "Your mission is to accompany the USS Berlin on its diplomatic mission to Ba'tok" << endl;
 			cout << "Find out why the Klingons are attacking us." << endl;
 			destinationOne = "Earth";
 			destinationTwo = "Ba'tok";
-			Sleep(1000);
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
+			textPause();
+			mainTritone();
 			cout << "Your ship the " << shipName << " leaves spacedock." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
+			mainTritone();
+			textPause();
 			cout << "Set Course For" << endl;
 			cout << "Type your Destination" << endl;
 			cout << destinationOne << "   " << destinationTwo << "   " << destinationThree << "   " << destinationFour << "   " << destinationFive << "   " << destinationSix << "   " << destinationSeven << "   " << destinationEight << "   " << destinationNine << "   " << destinationTen << endl; 
@@ -3512,60 +2792,44 @@ int partI()
 			{
 				cout << "Ensign Niron: Setting course for Ba'tok" << endl;
 				storyProgress = 3;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 			}
 			else if (answer == "Earth")
 			{
 				cout << "Ensign Niron: Setting course for Earth" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				storyProgress = 0;
 			}
 			cout << "Commander Benning: Captain, some of the crew are orginizing a party over in the Mess Hall. Would you like to join us?" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1000);
+			mainTritone();
+			textPause();
 			cout << endl;
 			cout << "A. Yes   B. No" << endl; 
 			cin >> inputTwo;
 			if (inputTwo == 'B')
 			{
 				cout << "Ok then, well, if you ever change your mind. You know where to find us." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1000);
+				mainTritone();
+				textPause();
 				cout << endl;
 				cout << "-*After a while you arrive at your destination*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 			}
 			else if (inputTwo == 'A')
 			{
 				cout << endl;
 				cout << "Ok then, come with me." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1500);
+				mainTritone();
+				textPause();
 				cout << endl;
 				cout << "-*You walk through the corridors*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1500);
+				mainTritone();
+				textPause();
 				cout << endl;
 				cout << "Commander Benning: Our new engineer apperently likes experimenting." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << endl;
-				Sleep(1500);
+				textPause();
 				cout << "A. Oh? B. Quiet I want silence." << endl;
 				cin >> input;
 				if (input == 'B')
@@ -3579,10 +2843,8 @@ int partI()
 					cout << "Commander Benning: Yeah he's been working on upgrading shields." << endl;
 					cout << "He finished some upgrades a while ago I think." << endl;
 					cout << "Oh, he has asked permission to activate the upgrades." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
-					Sleep(1500);
+					mainTritone();
+					textPause();
 					cout << endl;
 					cout << "A. Yes B. No" << endl;
 					cin >> input;
@@ -3598,67 +2860,47 @@ int partI()
 				}
 				cout << endl;
 				cout << "Commander Benning: We are here." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(500);
+				mainTritone();
+				textPauseShort();
 				cout << endl;
 				cout << "-*You arrive at the Mess Hall*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1500);
+				mainTritone();
+				textPause();
 				cout << endl;
 				cout << "Commander Benning: You first." << endl;
 				cout << endl;
-				Sleep(1500);
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				textPause();
+				mainTritone();
 				cout << "-*You enter the room*-" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F	
+				mainTritone();	
 				cout << endl;
-				Sleep(1500);
+				textPause();
 				cout << "Luitenent Parkinson: Captain theres a urgent matter we need to attend to." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
-				Sleep(1500);
+				mainTritone();
+				textPause();
 				cout << endl;
 				cout << "A. What is it. B. Shut up. C. What ever it is i'm sure you can take care of it." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cin >> input;
 				if (input == 'B')
 				{
 					cout << "Luitenent Parkinson: What? Fine." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					popularity = popularity - 1;
 				}
 				else if (input == 'C')
 				{
 					cout << "Luitenent Parkinson: Ok" << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 				}
 				else if (input == 'A')
 				{
 					cout << "Luitenent Parkinson: Our security sensors are too weak. The sensors cannot detect where everyone is!" << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cout << endl;
-					Sleep(1500);
+					textPause();
 					cout << "A. ... Thats it? B. Luitenent, no offense but you are overreacting. C. OH MY GOSH YOUR RIGHT! Luitenent Finery upgrade the sensors." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cout << endl;
 					cin >> input;
 					cout << endl;
@@ -3666,52 +2908,40 @@ int partI()
 					{
 						cout << "Luitenent Parkinson: ... " << endl;
 						popularity = popularity - 1;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						cout << endl;
-						Sleep(1500);
+						textPause();
 					}
 					else if (input == 'B')
 					{
 						cout << "Luitenent Parkinson: No. not at all. Captain, we need to upgrade the sensors." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						cout << endl;
-						Sleep(1500);
+						textPause();
 					}
 					else if (input == 'C')
 					{
 						cout << "Luitenent Parkinson: Thank you Captain." << endl;
 						popularity = popularity + 1;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						cout << endl;
-						Sleep(1500);
+						textPause();
 					}
 					cout << "Com: This is Ensign Niron, We are approaching our destination." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cout << endl;
-					Sleep(1500);
+					textPause();
 					cout << "-*You arrive on the bridge*-" << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 				}
 			}
 			
 			if (storyProgress < 3)
 			{
 				cout << "Ensign Niron: We have arrived at Earth" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << endl;
-				Sleep(1500);
+				textPause();
 				cout << "A. Go to sector Ba'tok.  B. Hail Utopia Planetia.  C. Attack Earth." << endl;
 				cin >> inputTwo;
 			
@@ -3729,7 +2959,7 @@ int partI()
 				{
 				cout << endl;
 				cout << "Utopia Planetia, goodbye. Well your supposed to go to Ba'tok right?" << endl;
-				Sleep(1500);
+				textPause();
 				cout << "-*You go to Ba'tok*-" << endl;
 				storyProgress = 3;
 				}
@@ -3737,12 +2967,12 @@ int partI()
 				{
 					cout << endl;
 					cout << "Utopia Planetia: Beggining Upgrades to shields." << endl;
-					Sleep(1500);
+					textPause();
 					cout << "Upgrades Completed." << endl;
 					cout << endl;
 					shields = shields + 5000;
 					cout << "Utopia Planetia, goodbye. Well your supposed to go to Ba'tok right?" << endl;
-					Sleep(1500);
+					textPause();
 					cout << "-*You go to Ba'tok*-" << endl;
 					storyProgress = 3;
 				}
@@ -3755,9 +2985,7 @@ int partI()
 					cin >> input;
 					if (input == 'A')
 					{
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						
 
 						srand(static_cast<unsigned int>(time(0)));
@@ -3816,9 +3044,7 @@ int partI()
 						if(typhonBaseShields < 1)
 						{
 							cout << "Enemy Shields are Down!" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							typhonBaseShields = 0;
 						}
 						if (shields < 1)
@@ -3846,9 +3072,7 @@ int partI()
 					}
 					else if (input == 'B')
 					{
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						
 
 						srand(static_cast<unsigned int>(time(0)));
@@ -3907,9 +3131,7 @@ int partI()
 						if(typhonBaseShields < 1)
 						{
 							cout << "Enemy Shields are Down!" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							typhonBaseShields = 0;
 						}
 						if (shields < 1)
@@ -3949,9 +3171,7 @@ int partI()
 						
 						if(shipName == "Avenger")
 						{
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							shipType = "Destroyer";
 							shipClass = "Defiant";
 							shields = defiantShields;
@@ -3964,9 +3184,7 @@ int partI()
 						}
 						else if(shipName == "Solstace")
 						{
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							shipType = "Scout";
 							shipClass = "Nova";
 							shields = novaShields;
@@ -3979,9 +3197,7 @@ int partI()
 						}
 						else if(shipName == "Breakpoint")
 						{
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							shipType = "Cruiser";
 							shipClass = "Ambassador";
 							shields = ambassadorShields;
@@ -3994,9 +3210,7 @@ int partI()
 						}
 						else if(shipName == "EnterpriseE")
 						{
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							shipType = "Battleship";
 							shipClass = "Solvereign";
 							shields = solvereignShields;
@@ -4012,18 +3226,14 @@ int partI()
 			if (storyProgress == 3)
 			{
 				cout << "Ensign Niron: We have arrived at Ba'tok" << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << endl;
-				Sleep(1500);
+				textPause();
 				cout << "USS Berlin: We have arrived at our destination. Hail the K'targ and" << endl;
 				cout << "begin the diplomatic talks." << endl;
-				Beep(392,250);  // G
-				Beep(523,125);  // C
-				Beep(698,500);  // F
+				mainTritone();
 				cout << endl;
-				Sleep(1500);
+				textPause();
 				cout << "A. Hail K'targ, B. Attack K'targ." << endl;
 				cin >> input;
 				if (input == 'B')
@@ -4033,21 +3243,15 @@ int partI()
 				if (input == 'A')
 				{
 					cout << "Hailing K'targ." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cout << endl;
-					Sleep(1500);
+					textPause();
 					cout << "Chancoller Moreth: This is Chancoller Moreth, to whom am I adressing?" << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
-					Sleep(1500);
+					mainTritone();
+					textPause();
 					cout << "A. Your Doom. B. This is Captain Kevin Novatia of the Federation." << endl;
 					cout << "We have come to begin diplomatic talks." << endl;
-					Beep(392,250);  // G
-					Beep(523,125);  // C
-					Beep(698,500);  // F
+					mainTritone();
 					cout << endl;
 					cin >> input;
 					if (input == 'A')
@@ -4058,16 +3262,12 @@ int partI()
 					{
 						cout << "Chancoller Moreth: You incompetent topah! You think you can cause chaos in the Klingon Empire" << endl;
 						cout << "and get away with it! No. You will die where you stand." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						cout << endl;
-						Sleep(1500);
+						textPause();
 						cout << "A. PetaQ! You make useless claims. You utter one more word Qi'YaH and you will die!" << endl;
 						cout << "B. What? Im sure there is a missunderstanding. We never attacked you." << endl;
-						Beep(392,250);  // G
-						Beep(523,125);  // C
-						Beep(698,500);  // F
+						mainTritone();
 						cout << endl;
 						cin >> input;
 						if (input == 'B')
@@ -4078,14 +3278,10 @@ int partI()
 						{
 							cout << "Chancoller Moreth: You swear well Federation. Very well. We have found that your Federation agents" << endl;
 							cout << "infiltrated our houses and have been sparking a Klingon Civil War. Do you deny this?" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							cout << endl;
 							cout << "A. Yes. B. No" << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							cout << endl;
 							cin >> input;
 							if (input == 'B')
@@ -4115,9 +3311,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -4214,23 +3408,15 @@ int partI()
 								ktargHull = 0;
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(ktargShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								ktargShields = 0;
 							}
@@ -4258,9 +3444,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -4357,23 +3541,15 @@ int partI()
 								ktargHull = 0;
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(ktargShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								ktargShields = 0;
 							}
@@ -4416,9 +3592,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -4515,23 +3689,15 @@ int partI()
 								trethHull = 0;
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(trethShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								trethShields = 0;
 							}
@@ -4559,9 +3725,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -4655,23 +3819,15 @@ int partI()
 								trethHull = 0;
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(trethShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								trethShields = 0;
 							}
@@ -4711,9 +3867,7 @@ int partI()
 							
 							if(shipName == "Avenger")
 							{
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								shipType = "Destroyer";
 								shipClass = "Defiant";
 								shields = defiantShields;
@@ -4726,9 +3880,7 @@ int partI()
 							}
 							else if(shipName == "Solstace")
 							{
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								shipType = "Scout";
 								shipClass = "Nova";
 								shields = novaShields;
@@ -4741,9 +3893,7 @@ int partI()
 							}
 							else if(shipName == "Breakpoint")
 							{
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								shipType = "Cruiser";
 								shipClass = "Ambassador";
 								shields = ambassadorShields;
@@ -4756,9 +3906,7 @@ int partI()
 							}
 							else if(shipName == "EnterpriseE")
 							{
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								shipType = "Battleship";
 								shipClass = "Solvereign";
 								shields = solvereignShields;
@@ -4772,24 +3920,18 @@ int partI()
 					}
 				}
 			}
-			Sleep(1000);
+			textPause();
 			cout << "After several days." << endl; 
-			Sleep(1000);
+			textPause();
 			cout << "Doctor Iona: Sir, i've anylized the DNA. Its Romulan." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1500);
+			mainTritone();
+			textPause();
 			cout << "Romulan? Ensign Niron: Scan the area for Romulan Signitures." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1500);
+			mainTritone();
+			textPause();
 			cout << "Ensign Niron: 8 Romulan Warbirds, De'redex class, are headed toward Qonos." << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Sleep(1500);
+			mainTritone();
+			textPause();
 			cout << "A. Hail Chancoller Moreth. B. Warp to Qonos." << endl;
 			cin >> finalChoice;
 			if (finalChoice == 'A')
@@ -4817,9 +3959,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -4917,23 +4057,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -4961,9 +4093,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -5058,23 +4188,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -5120,9 +4242,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -5220,23 +4340,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -5264,9 +4376,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -5361,23 +4471,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -5423,9 +4525,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -5523,23 +4623,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -5567,9 +4659,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -5664,23 +4754,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -5726,9 +4808,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -5826,23 +4906,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -5870,9 +4942,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -5967,23 +5037,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -6029,9 +5091,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -6129,23 +5189,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -6173,9 +5225,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -6270,23 +5320,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -6332,9 +5374,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -6432,23 +5472,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -6476,9 +5508,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -6573,23 +5603,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -6635,9 +5657,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -6735,23 +5755,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -6779,9 +5791,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -6876,23 +5886,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -6938,9 +5940,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -7038,23 +6038,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -7082,9 +6074,7 @@ int partI()
 						{
 							cout << endl;
 							cout << endl;
-							Beep(392,250);  // G
-							Beep(523,125);  // C
-							Beep(698,500);  // F
+							mainTritone();
 							
 
 							srand(static_cast<unsigned int>(time(0)));
@@ -7179,23 +6169,15 @@ int partI()
 								cout << "Enemy Destroyed!" << endl;
 								cout << "Mission Accomplished" << endl;
 								deFleet = deFleet - 1;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
-								Beep(659,250);  // E
-								Beep(523,250);  // C
-								Beep(440,250);  // A
-								Beep(587,250);  // D
-								Beep(784,500);  // G
+								mainTritone();
+								remainingTheme();
 							}
 							
 
 							if(deShields < 1)
 							{
 								cout << "Enemy Shields are Down!" << endl;
-								Beep(392,250);  // G
-								Beep(523,125);  // C
-								Beep(698,500);  // F
+								mainTritone();
 								cout << endl;
 								deShields = 0;
 							}
@@ -7236,48 +6218,30 @@ int partI()
 
 
 			cout << "End Credits" << endl;
-			Sleep(1000);
+			textPause();
 			cout << "-----Extra Music-----" << endl;
 			cout << endl;
 			cout << "Fur Elise" << endl;
 			cout << "Intro of Star Trek" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Beep(659,250);  // E
-			Beep(523,250);  // C
-			Beep(440,250);  // A
-			Beep(587,250);  // D
-			Beep(784,500);  // G
+			mainTritone();
+			remainingTheme();
 			cout << endl;
 			cout << endl;
 			cout << "-----Story Writers-----" << endl;
 			cout << endl;
 			cout << "Alex Ruan" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Beep(659,250);  // E
-			Beep(523,250);  // C
-			Beep(440,250);  // A
-			Beep(587,250);  // D
-			Beep(784,500);  // G
+			mainTritone();
+			remainingTheme();
 			cout << endl;
 			cout << endl;
 			cout << "-----Programmers-----" << endl;
 			cout << endl;
 			cout << "Alex Ruan" << endl;
-			Beep(392,250);  // G
-			Beep(523,125);  // C
-			Beep(698,500);  // F
-			Beep(659,250);  // E
-			Beep(523,250);  // C
-			Beep(440,250);  // A
-			Beep(587,250);  // D
-			Beep(784,500);  // G
+			mainTritone();
+			remainingTheme();
 			cout << endl;
 			cout << endl;
-			Sleep(2000);
+			textPauseLong();
 			return 0;
 		}
 //End of Story
