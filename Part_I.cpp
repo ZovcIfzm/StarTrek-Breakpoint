@@ -19,7 +19,7 @@ using namespace std;
 //Note known Errors that don't really need fixing but it would be good to fix
 //None
 
-int main()
+int partI()
 {
 //Class
 	
@@ -989,7 +989,7 @@ int main()
 	//Coridors
 
 			}
-			if (storyProgress = 1)
+			if (storyProgress == 1)
 			{
 				Beep(392,250);  // G
 				Beep(523,125);  // C
@@ -1660,7 +1660,7 @@ int main()
 					Sleep(1000);
 					karma++;
 				}
-				else if (input == 'B' || 'A')
+				else if (input == 'B' || input == 'A')
 				{
 					cout << "-*You continue to the bridge.*-" << endl;
 					cout << endl;
@@ -4009,7 +4009,7 @@ int main()
 					}
 				}
 			}		
-			if (storyProgress = 3)
+			if (storyProgress == 3)
 			{
 				cout << "Ensign Niron: We have arrived at Ba'tok" << endl;
 				Beep(392,250);  // G

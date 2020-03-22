@@ -17,7 +17,7 @@ using namespace std;
 //Note known Errors that don't really need fixing but it would be good to fix
 //None
 
-int storyPartTwo()
+int partII()
 {
 //Initializing the Variables
 //Errors - None
